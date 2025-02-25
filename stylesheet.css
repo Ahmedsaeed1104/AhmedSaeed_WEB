@@ -587,9 +587,10 @@ h3 {
 
     /* Adjust Project Photos */
     .HOTEL-project-VIDEO, .CALC-project-photo, .MONEY-project-photo, .EMB-project-photo {
-        width: 70%; /* Reduce width to fit within borders */
-        margin-left: auto;
-        margin-right: auto;
+        width: 100%; /* Full width for mobile */
+        height: auto; /* Auto height for mobile */
+        margin-left: 0; /* Adjusted margin for mobile */
+        margin-right: 0;
     }
 
     /* Adjust Broast Image */
