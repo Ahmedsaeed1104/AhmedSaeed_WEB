@@ -564,6 +564,53 @@ h3 {
         padding: 8px 16px; /* Smaller padding for mobile */
     }
 
+
+/* Media Queries for Tablets (481px - 1024px) */
+@media only screen and (min-width: 481px) and (max-width: 1130px) {
+    /* Adjust About Me Section */
+    #about_paragraph {
+        width: 90%; /* Reduce width to fit within borders */
+        font-size: 16px; /* Slightly smaller font size for tablets */
+        margin-top: 20px; /* Adjust margin for better spacing */
+    }
+
+    /* Adjust Websites Section */
+    #WEB_P {
+        width: 90%; /* Reduce width to fit within borders */
+        font-size: 16px; /* Slightly smaller font size for tablets */
+        margin-top: 20px; /* Adjust margin for better spacing */
+    }
+
+    /* Adjust Project Photos */
+    .HOTEL-project-VIDEO, .CALC-project-photo, .MONEY-project-photo, .EMB-project-photo {
+        width: 90%; /* Reduce width to fit within borders */
+        
+    }
+
+    /* Adjust Broast Image */
+    #broast {
+        width: 90%; /* Reduce width to fit within borders */
+        height: auto; /* Maintain aspect ratio */
+        margin-left: auto; /* Center the image */
+        margin-right: auto;
+    }
+
+    /* Adjust Contact Icons */
+    .contact-icon {
+        width: 40px; /* Slightly larger icons for tablets */
+        height: 40px;
+    }
+
+    #contact {
+        gap: 20px; /* Slightly larger gap for tablets */
+    }
+
+    /* Adjust Email Display */
+    #email-display {
+        font-size: 14px; /* Slightly larger font size for tablets */
+    }
+}
+
     .gallery-item p {
         font-size: 14px; /* Smaller font size for mobile */
     }
