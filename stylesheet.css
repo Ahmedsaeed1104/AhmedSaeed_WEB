@@ -564,6 +564,10 @@ h3 {
         padding: 8px 16px; /* Smaller padding for mobile */
     }
 
+    .gallery-item p {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+}
 
 /* Media Queries for Tablets (481px - 1024px) */
 @media only screen and (min-width: 481px) and (max-width: 1130px) {
@@ -608,10 +612,5 @@ h3 {
     /* Adjust Email Display */
     #email-display {
         font-size: 14px; /* Slightly larger font size for tablets */
-    }
-}
-
-    .gallery-item p {
-        font-size: 14px; /* Smaller font size for mobile */
     }
 }
