@@ -486,8 +486,8 @@ h3 {
 
 /************************************************************************************************************************************************************/
 
-/* Media Queries for Mobile Devices */
-@media only screen and (max-width: 768px) {
+/* Media Queries for Phones Only (max-width: 480px) */
+@media only screen and (max-width: 480px) {
     header h1 {
         font-size: 24px; /* Smaller font size for mobile */
     }
@@ -514,6 +514,20 @@ h3 {
         margin-right: 0;
     }
 
+    /* Fix CALC project photo scaling */
+    .CALC-project-photo {
+        width: 100%; /* Full width for mobile */
+        height: auto; /* Auto height for mobile */
+        margin-left: 0; /* Adjusted margin for mobile */
+        margin-right: 0;
+        transform: none !important; /* Disable scaling on hover */
+    }
+
+    .CALC-project-photo:hover {
+        transform: none !important; /* Disable scaling on hover */
+        box-shadow: none !important; /* Disable shadow on hover */
+    }
+
     #broast {
         width: 100%; /* Full width for mobile */
         height: auto; /* Auto height for mobile */
@@ -533,6 +547,12 @@ h3 {
 
     #contact {
         gap: 10px; /* Smaller gap for mobile */
+    }
+
+    /* Adjust email display size */
+    #email-display {
+        font-size: 12px; /* Smaller font size for email display */
+        white-space: nowrap; /* Prevent email from breaking into multiple lines */
     }
 
     h3 {
