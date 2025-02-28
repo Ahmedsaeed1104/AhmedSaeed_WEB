@@ -477,7 +477,7 @@ h3 {
     color: #1A4870;
     margin-bottom: 8px;
     font-family: 'Cairo', sans-serif;
-    font-weight: 800; /* Extra Bold */
+    font-weight: 800; 
     text-transform: uppercase;
     letter-spacing: 1.2px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
@@ -486,168 +486,169 @@ h3 {
 
 /************************************************************************************************************************************************************/
 
-/* Media Queries for Phones Only (max-width: 480px) */
+/* Media Queries */
 @media only screen and (max-width: 480px) {
     header h1 {
-        font-size: 24px; /* Smaller font size for mobile */
+        font-size: 24px; 
     }
 
     #T_ABOUT_ME, #T_MY_WORK, #T_CONTACT, #MT_PROJECTS, #MT_EMBEDDED, #MT_WEBSITES, #MT_AI_Gallery {
-        font-size: 20px; /* Smaller font size for mobile */
+        font-size: 20px; 
     }
 
     .profile-photo {
-        width: 120px; /* Smaller profile photo for mobile */
+        width: 120px; 
         height: 120px;
-        margin-right: 10px; /* Adjusted margin for mobile */
+        display: block;
+        margin: auto;
     }
 
     #about_paragraph {
-        width: 100%; /* Full width for mobile */
-        font-size: 14px; /* Smaller font size for mobile */
+        width: 100%; 
+        font-size: 14px; 
     }
 
     .HOTEL-project-VIDEO, .CALC-project-photo, .MONEY-project-photo, .EMB-project-photo {
-        width: 100%; /* Full width for mobile */
-        height: auto; /* Auto height for mobile */
-        margin-left: 0; /* Adjusted margin for mobile */
+        width: 100%; 
+        height: auto; 
+        margin-left: 0; 
         margin-right: 0;
+        
     }
 
-    /* Fix CALC project photo scaling */
     .CALC-project-photo {
-        width: 100%; /* Full width for mobile */
-        height: auto; /* Auto height for mobile */
-        margin-left: 0; /* Adjusted margin for mobile */
+        width: 100%; 
+        height: auto;
+        margin-left: 0; 
         margin-right: 0;
-        transform: none !important; /* Disable scaling on hover */
+        transform: none !important; 
     }
 
     .CALC-project-photo:hover {
-        transform: none !important; /* Disable scaling on hover */
-        box-shadow: none !important; /* Disable shadow on hover */
+        transform: none !important; 
+        box-shadow: none !important; 
     }
 
     #broast {
-        width: 100%; /* Full width for mobile */
-        height: auto; /* Auto height for mobile */
-        margin-left: 0; /* Adjusted margin for mobile */
+        width: 100%; 
+        height: auto; 
+        margin-left: 0; 
         margin-right: 0;
     }
 
     #WEB_P {
-        width: 100%; /* Full width for mobile */
-        font-size: 14px; /* Smaller font size for mobile */
+        width: 100%; 
+        font-size: 14px; 
     }
 
     .contact-icon {
-        width: 30px; /* Smaller contact icons for mobile */
+        width: 30px; 
         height: 30px;
     }
 
     #contact {
-        gap: 10px; /* Smaller gap for mobile */
+        gap: 10px; 
     }
 
-    /* Adjust email display size */
+    
     #email-display {
-        font-size: 12px; /* Smaller font size for email display */
-        white-space: nowrap; /* Prevent email from breaking into multiple lines */
+        font-size: 12px; 
+        white-space: nowrap; 
     }
 
     h3 {
-        font-size: 18px; /* Smaller font size for mobile */
+        font-size: 18px; 
     }
 
     .resume-link, .CERTIF, .PRLINK {
-        font-size: 14px; /* Smaller font size for mobile */
-        padding: 8px 16px; /* Smaller padding for mobile */
+        font-size: 14px; 
+        padding: 8px 16px; 
     }
 
     .gallery-item p {
-        font-size: 14px; /* Smaller font size for mobile */
+        font-size: 14px; 
     }
 }
 
-/* Media Queries for Tablets (481px - 1024px) */
+/* Media Queries  */
 @media only screen and (min-width: 481px) and (max-width: 1130px) {
     header h1 {
-        font-size: 24px; /* Smaller font size for mobile */
+        font-size: 24px; 
     }
 
     #T_ABOUT_ME, #T_MY_WORK, #T_CONTACT, #MT_PROJECTS, #MT_EMBEDDED, #MT_WEBSITES, #MT_AI_Gallery {
-        font-size: 20px; /* Smaller font size for mobile */
+        font-size: 20px; 
     }
 
     .profile-photo {
-        width: 120px; /* Smaller profile photo for mobile */
+        width: 120px; 
         height: 120px;
-        margin-right: 10px; /* Adjusted margin for mobile */
+        display: block;
+        margin: auto;
     }
 
     #about_paragraph {
-        width: 100%; /* Full width for mobile */
-        font-size: 14px; /* Smaller font size for mobile */
+        width: 100%; 
+        font-size: 14px; 
     }
 
     .HOTEL-project-VIDEO, .CALC-project-photo, .MONEY-project-photo, .EMB-project-photo {
-        width: 100%; /* Full width for mobile */
-        height: auto; /* Auto height for mobile */
-        margin-left: 0; /* Adjusted margin for mobile */
+        width: 100%; 
+        height: auto; 
+        margin-left: 0; 
         margin-right: 0;
+        
     }
 
-    /* Fix CALC project photo scaling */
     .CALC-project-photo {
-        width: 100%; /* Full width for mobile */
-        height: auto; /* Auto height for mobile */
-        margin-left: 0; /* Adjusted margin for mobile */
+        width: 100%; 
+        height: auto; 
+        margin-left: 0; 
         margin-right: 0;
-        transform: none !important; /* Disable scaling on hover */
+        transform: none !important; 
     }
 
     .CALC-project-photo:hover {
-        transform: none !important; /* Disable scaling on hover */
-        box-shadow: none !important; /* Disable shadow on hover */
+        transform: none !important; 
+        box-shadow: none !important; 
     }
 
     #broast {
-        width: 100%; /* Full width for mobile */
-        height: auto; /* Auto height for mobile */
-        margin-left: 0; /* Adjusted margin for mobile */
+        width: 100%; 
+        height: auto; 
+        margin-left: 0; 
         margin-right: 0;
     }
 
     #WEB_P {
-        width: 100%; /* Full width for mobile */
-        font-size: 14px; /* Smaller font size for mobile */
+        width: 100%; 
+        font-size: 14px; 
     }
 
     .contact-icon {
-        width: 30px; /* Smaller contact icons for mobile */
+        width: 30px;
         height: 30px;
     }
 
     #contact {
-        gap: 10px; /* Smaller gap for mobile */
+        gap: 10px; 
     }
 
-    /* Adjust email display size */
     #email-display {
-        font-size: 12px; /* Smaller font size for email display */
-        white-space: nowrap; /* Prevent email from breaking into multiple lines */
+        font-size: 12px; 
+        white-space: nowrap; 
     }
 
     h3 {
-        font-size: 18px; /* Smaller font size for mobile */
+        font-size: 18px; 
     }
 
     .resume-link, .CERTIF, .PRLINK {
-        font-size: 14px; /* Smaller font size for mobile */
-        padding: 8px 16px; /* Smaller padding for mobile */
+        font-size: 14px; 
+        padding: 8px 16px; 
     }
 
     .gallery-item p {
-        font-size: 14px; /* Smaller font size for mobile */
+        font-size: 14px; 
     }
 }
