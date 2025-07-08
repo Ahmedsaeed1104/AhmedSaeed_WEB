@@ -270,14 +270,11 @@ header h1 {
 }
 
 .EMB-project-photo {
-    width: 550px;
-    margin-left:  70px;
-    margin-right: 70px;
-    height: 350px;
-    border: 4px solid #007B7F;
+    display: inline;
+    margin-left: 105px;
     padding: 5px;
     background-color: #fff;
-    display: inline;
+    border: 4px solid #007B7F;
     box-sizing: border-box;
 }
 
