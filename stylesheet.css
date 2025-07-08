@@ -493,6 +493,12 @@ h3 {
 
 
 /************************************************************************************************************************************************************/
+@media (min-width: 768px) {
+    .EMB-project-photo {
+        width: 550px;
+        height: 350px;
+    }
+}
 
 /* Media Queries */
 @media only screen and (max-width: 480px) {
@@ -521,7 +527,7 @@ h3 {
         height: auto; 
         margin-left: 0; 
         margin-right: 0;
-        
+        display: block;
     }
 
     .CALC-project-photo {
