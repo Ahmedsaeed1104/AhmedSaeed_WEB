@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أحمد سعيد | Portfolio</title>
+    <link rel="icon" type="image/png" href="MEDIA/A.png">
+
+    <!-- الخطوط الجديدة -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Tajawal:wght@300;400;500;700&family=Changa:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+    <style>
+        /* تطبيق الخطوط الجديدة */
+        :root {
+            --font-heading: 'El Messiri', sans-serif;
+            --font-body: 'Tajawal', sans-serif;
+            --font-logo: 'Changa', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        /* الشعار */
+        .logo {
+            font-family: var(--font-logo);
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+
+        /* العناوين الرئيسية */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 2.5rem;
+        }
+
+        /* النصوص البارزة */
+        .tagline {
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* الأزرار */
+        .btn {
+            font-family: var(--font-body);
+            font-weight: 500;
+        }
+
+        /* شارات الأدوار */
+        .role-badge {
+            font-family: var(--font-body);
+            font-weight: 500;
+        }
+
+        /* القائمة */
+        .nav-links a {
+            font-family: var(--font-body);
+            font-weight: 500;
+        }
+
+        /* المهارات */
+        .skill-type {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .skill-box {
+            font-family: var(--font-body);
+            font-weight: 400;
+        }
+
+        /* الخدمات */
+        .service-card h3 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            font-family: var(--font-body);
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        /* المشاريع */
+        .portfolio-overlay h3 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+        }
+
+        .portfolio-overlay p {
+            font-family: var(--font-body);
+            font-weight: 400;
+        }
+
+        /* التوصيات */
+        .testimonial-content p {
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-style: italic;
+            line-height: 1.7;
+        }
+
+        .testimonial-author h4 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+        }
+
+        /* التواصل */
+        .contact-info h3,
+        .contact-form h3 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+        }
+
+        .info-item h4 {
+            font-family: var(--font-heading);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            font-family: var(--font-body);
+            font-weight: 400;
+        }
+
+        /* الفوتر */
+        .footer-column h3 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+        }
+
+        .footer-column p,
+        .footer-links li {
+            font-family: var(--font-body);
+            font-weight: 400;
+        }
+
+        /* الخط الزمني */
+        .timeline-content h3 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+        }
+
+        .timeline-content h4 {
+            font-family: var(--font-heading);
+            font-weight: 500;
+        }
+
+        .timeline-content p {
+            font-family: var(--font-body);
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .certificate-link {
+            font-family: var(--font-body);
+            font-weight: 500;
+        }
+    </style>
+    <link rel="stylesheet" href="AR/styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#home" class="logo">أحمد<span>سعيد</span></a>
+                <ul class="nav-links">
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#about">من أنا</a></li>
+                    <li><a href="#skills">المهارات</a></li>
+                    <li><a href="#timeline">التعليم والخبرة</a></li>
+                    <li><a href="#services">الخدمات</a></li>
+                    <li><a href="#portfolio">المشاريع</a></li>
+                    <li><a href="#testimonials">التوصيات</a></li>
+                    <li><a href="#contact">اتصل بي</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <button id="langBtnn">EN</button>
+            </nav>
+        </div>
+
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="section">
+        <div class="container">
+            <div class="hero-content centered">
+                <div class="name-container">
+                    <h1 id="typed-name"></h1>
+                </div>
+                <div class="job-roles">
+                    <div class="role-badge">مهندس برمجيات</div>
+                    <div class="role-badge">مطور Flutter</div>
+                    <div class="role-badge">مطور ويب</div>
+                </div>
+                <p class="tagline">
+                    مهندس برمجيات مبدع متخصص في تطوير تطبيقات الموبايل باستخدام Flutter
+                    وتقنيات الويب الحديثة. شغوف ببناء تطبيقات عالية الأداء وسهلة الاستخدام
+                    تحل مشاكل حقيقية في العالم.
+                </p>
+                <div class="hero-btns">
+                    <a href="#portfolio" class="btn">شاهد أعمالي</a>
+                    <a href="#contact" class="btn secondary">اتصل بي</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interactive Background -->
+        <div class="interactive-bg">
+            <!-- Web-themed elements -->
+            <div class="bg-side web-bg">
+                <div class="web-element browser-window"></div>
+                <div class="web-element code-window"></div>
+                <div class="web-element server"></div>
+                <div class="connection connection-1"></div>
+                <div class="connection connection-2"></div>
+            </div>
+
+            <!-- Mobile-themed elements -->
+            <div class="bg-side mobile-bg">
+                <div class="mobile-element smartphone"></div>
+                <div class="mobile-element tablet"></div>
+                <div class="mobile-element app-icon"></div>
+                <div class="connection connection-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">من <span>أنا</span></h2>
+
+            <!-- WHO I AM + PHOTO -->
+            <div class="who-row">
+                <div class="profile-wrapper">
+                    <img src="MEDIA/AHMED.jpg" alt="أحمد سعيد" class="profile-pic">
+                </div>
+                <div class="who-text">
+                    <h3>من أنا</h3>
+                    <p>مهندس برمجيات متمكن في تطوير تطبيقات الموبايل باستخدام Flutter وتطوير الويب، مع أساس قوي في مبادئ
+                        هندسة البرمجيات والأنظمة المدمجة. شغوف ببناء تطبيقات فعالة وسريعة الاستجابة ومركزة على المستخدم
+                        تقدم تجارب سلسة عبر المنصات المختلفة</p>
+                </div>
+            </div>
+
+            <!-- EDUCATION -->
+            <div class="content-block">
+                <h4>التعليم</h4>
+                <p>بكالوريوس هندسة الحاسوب
+                    الجامعة المصرية اليابانية للعلوم والتكنولوجيا (E-JUST)</p>
+            </div>
+
+            <!-- EXPERIENCE -->
+            <div class="content-block">
+                <h4>الخبرة</h4>
+                <p>قمت بتطوير والمساهمة في حلول برمجية متعددة من خلال المشاريع الأكاديمية والعمل الجماعي والتعلم الذاتي.
+                    بالإضافة إلى ذلك، اكتسبت خبرة عملية من خلال العمل على مشاريع حرة، وتصميم وتطوير مواقع ويب احترافية
+                    مخصصة وفقًا لاحتياجات العملاء. متمكن في إنشاء تطبيقات ويب وجوال مع التركيز على الأداء وسهولة
+                    الاستخدام والتصميم النظيف
+                </p>
+            </div>
+
+            <!-- PROJECTS -->
+            <div class="content-block">
+                <h4>المشاريع</h4>
+                <p>أكثر من 15 مشروع مكتمل عبر مجالات متعددة</p>
+            </div>
+
+            <div class="about-btns">
+                <a href="https://drive.google.com/file/d/1FRXNkjzMRjOliKe_xdADcP_k2jfcmUYo/view?usp=sharing"
+                    target="_blank" class="btn">سيرتي الذاتية</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">مهار<span>اتي</span></h2>
+
+            <div class="skills-container">
+                <!-- Programming Languages -->
+                <div class="skill-row">
+                    <div class="skill-type"><i class="fas fa-code"></i> لغات البرمجة</div>
+                    <div class="skills-boxes">
+                        <div class="skill-box"><i class="fab fa-cuttlefish"></i> C/C++</div>
+                        <div class="skill-box"><i class="fab fa-java"></i> Java</div>
+                        <div class="skill-box"><i class="fab fa-python"></i> Python</div>
+                        <div class="skill-box"><i class="fab fa-js-square"></i> JavaScript</div>
+                        <div class="skill-box"><i class="fab fa-html5"></i> HTML</div>
+                        <div class="skill-box"><i class="fab fa-css3-alt"></i> CSS</div>
+                        <div class="skill-box"><i class="fas fa-code"></i> Dart</div>
+                    </div>
+                </div>
+
+                <!-- Tools & Technologies -->
+                <div class="skill-row">
+                    <div class="skill-type"><i class="fas fa-tools"></i> الأدوات والتقنيات</div>
+                    <div class="skills-boxes">
+                        <div class="skill-box"><i class="fas fa-laptop-code"></i> VS Code</div>
+                        <div class="skill-box"><i class="fas fa-mobile-alt"></i> Flutter</div>
+                        <div class="skill-box"><i class="fas fa-fire"></i> Firebase</div>
+                        <div class="skill-box"><i class="fas fa-cogs"></i> Eclipse</div>
+                        <div class="skill-box"><i class="fab fa-git-alt"></i> Git</div>
+                        <div class="skill-box"><i class="fas fa-microchip"></i> Proteus</div>
+                        <div class="skill-box"><i class="fas fa-microchip"></i> Arduino IDE</div>
+                        <div class="skill-box"><i class="fas fa-mobile-alt"></i> Android Studio</div>
+                    </div>
+                </div>
+
+                <!-- Concepts -->
+                <div class="skill-row">
+                    <div class="skill-type"><i class="fas fa-microchip"></i> المفاهيم</div>
+                    <div class="skills-boxes">
+                        <div class="skill-box"><i class="fas fa-microchip"></i> Embedded Systems</div>
+                        <div class="skill-box"><i class="fas fa-object-group"></i> OOP</div>
+                        <div class="skill-box"><i class="fas fa-window-maximize"></i> GUI</div>
+                        <div class="skill-box"><i class="fas fa-database"></i> Data Structures</div>
+                        <div class="skill-box"><i class="fas fa-robot"></i> Machine Learning</div>
+                        <div class="skill-box"><i class="fas fa-project-diagram"></i> Algorithms</div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skill-row">
+                    <div class="skill-type"><i class="fas fa-brain"></i> المهارات الشخصية</div>
+                    <div class="skills-boxes">
+                        <div class="skill-box"><i class="fas fa-users"></i> العمل الجماعي</div>
+                        <div class="skill-box"><i class="fas fa-clock"></i> إدارة الوقت</div>
+                        <div class="skill-box"><i class="fas fa-comments"></i> التواصل</div>
+                        <div class="skill-box"><i class="fas fa-lightbulb"></i> حل المشكلات</div>
+                        <div class="skill-box"><i class="fas fa-sync-alt"></i> المرونة</div>
+                    </div>
+                </div>
+
+                <!-- Languages -->
+                <div class="skill-row">
+                    <div class="skill-type"><i class="fas fa-language"></i> اللغات</div>
+                    <div class="skills-boxes">
+                        <div class="skill-box"><i class="fas fa-comment"></i> العربية (اللغة الأم)</div>
+                        <div class="skill-box"><i class="fas fa-comment"></i> الإنجليزية (محترف)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Timeline Section -->
+    <section dir="ltr" id="timeline" class="section">
+        <div class="container">
+            <h2 class="section-title">التعليم <span>والخبرة</span></h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2026</div>
+                    <div class="timeline-content">
+                        <h3>هندسة الحاسوب</h3>
+                        <h4>الجامعة المصرية اليابانية للعلوم والتكنولوجيا (E-JUST)</h4>
+                        <p>مطور برمجيات يبني حلول فعالة ومركزة على المستخدم عبر التطبيقات والأنظمة
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-content">
+                        <h3>متدرب Flutter – DEPI</h3>
+                        <h4>الإسكندرية، مصر</h4>
+                        <p>اكتسبت خبرة عملية في Dart و Flutter والتطوير المتقدم</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-content">
+                        <h3>متدرب تكنولوجيا المعلومات</h3>
+                        <h4>بتروجيت، الإسكندرية</h4>
+                        <p>أكملت تدريب مكثف في البنية التحتية لتكنولوجيا المعلومات، الشبكات، وحلول البرمجيات المؤسسية.
+                        </p>
+                        <a href="https://drive.google.com/file/d/1jyZWe7Gml0rF1bEKxSEOwiFAIZlKucjP/view?usp=sharing"
+                            target="_blank" class="certificate-link">عرض الشهادة</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-content">
+                        <h3>الذكاء الاصطناعي والتعلم الآلي</h3>
+                        <h4>Sprints</h4>
+                        <p>أكملت تدريب في خوارزميات التعلم الآلي، معالجة البيانات، وتقييم النماذج.
+                        </p>
+                        <a href="https://drive.google.com/file/d/1CpIKk9TWpYYp_A99-FL8NIjSqTvXXXWj/view?usp=sharing"
+                            target="_blank" class="certificate-link">عرض الشهادة</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <h3>دبلوم الأنظمة المدمجة</h3>
+                        <h4>AMIT Learning، الإسكندرية</h4>
+                        <p>تدريب شامل في برمجة المتحكمات الدقيقة، واجهات الأجهزة الطرفية، والأنظمة في الوقت الحقيقي.</p>
+                        <a href="https://drive.google.com/file/d/1vmbfUmDF6tWXIwxI-OOAFKQFe0NU4pgn/view?usp=sharing"
+                            target="_blank" class="certificate-link">عرض الشهادة</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <h3>شهادة AICE</h3>
+                        <h4>برنامج ALX</h4>
+                        <p>أكملت تدريب متقدم في مفاهيم الذكاء الاصطناعي وهندسة السحابة.</p>
+                        <a href="https://drive.google.com/file/d/1UUOmAW_HJvAeVkoHIhXbgHeT2jPqaq8E/view?usp=sharing"
+                            target="_blank" class="certificate-link">عرض الشهادة</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">خدم<span>اتي</span></h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>تطوير تطبيقات Flutter</h3>
+                    <p>إنشاء تطبيقات جوال عالية الأداء ومتعددة المنصات مع واجهات مستخدم سلسة وسريعة الاستجابة.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>تطوير واجهات الويب</h3>
+                    <p>تصميم واجهات ويب تفاعلية وسريعة الاستجابة وسهلة الاستخدام.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>تطوير البرمجيات</h3>
+                    <p>بناء تطبيقات سطح المكتب والويب فعالة وقابلة للتوسع وسهلة الصيانة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
+        <div class="container">
+            <h2 class="section-title">مشاري<span>عي</span></h2>
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">الكل</button>
+                <button class="filter-btn" data-filter="web">ويب</button>
+                <button class="filter-btn" data-filter="app">تطبيقات</button>
+                <button class="filter-btn" data-filter="software">برمجيات</button>
+                <button class="filter-btn" data-filter="embedded">أنظمة مدمجة</button>
+                <button class="filter-btn" data-filter="ml">ذكاء اصطناعي</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Web Project 1 -->
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-img">
+                        <a href="MEDIA/broast website.png" data-lg-size="1600-1066" class="gallery-item">
+                            <img src="MEDIA/broast website.png" alt="موقع مطعم">
+                        </a>
+                        <div class="portfolio-overlay">
+                            <h3>موقع مطعم</h3>
+                            <p>موقع تفاعلي لمطعم دجاج مقلي مع حاسبة طلبات</p>
+                            <div class="portfolio-links">
+                                <a href="https://ahmedsaeed1104.github.io/broast.com/" target="_blank"><i
+                                        class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Project 2 -->
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-img">
+                        <a href="MEDIA/phy.png" data-lg-size="1600-1066" class="gallery-item">
+                            <img src="MEDIA/phy.png" alt="موقع تعليمي">
+                        </a>
+                        <div class="portfolio-overlay">
+                            <h3>موقع تعليمي</h3>
+                            <p>موقع تعليمي للفيزياء</p>
+                            <div class="portfolio-links">
+                                <a href="https://ibtehal-ghazi.github.io/nuqtat-taqa/" target="_blank"><i
+                                        class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Project 3 -->
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-img">
+                        <a href="MEDIA/bio.png" data-lg-size="1600-1066" class="gallery-item">
+                            <img src="MEDIA/bio.png" alt="موقع تعليمي">
+                        </a>
+                        <div class="portfolio-overlay">
+                            <h3>موقع تعليمي</h3>
+                            <p>موقع تعليمي للأحياء</p>
+                            <div class="portfolio-links">
+                                <a href="https://ahmedsaeed1104.github.io/bio1/" target="_blank"><i
+                                        class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- todo app -->
+                <div class="portfolio-item" data-category="app">
+                    <div class="portfolio-img">
+                        <a href="MEDIA/todoapp.png" data-lg-size="1600-1066" class="gallery-item">
+                            <img src="MEDIA/todoapp.png" alt="تطبيق المهام">
+                        </a>
+                        <div class="portfolio-overlay">
+                            <h3>تطبيق المهام</h3>
+                            <p>تطبيق لإدارة مهامك اليومية</p>
+                            <div class="portfolio-links">
+                                <a href="https://appetize.io/app/b_ksjhudkmarbxrn5j425s4fsdtm" target="_blank"><i
+                                        class="fas fa-link"></i></a>
+                                <a href="https://mostaql.com/portfolio/3131957-to-do-application-%D8%AA%D8%B7%D8%A8%D9%8A%D9%82-%D9%85%D9%87%D8%A7%D9%85-%D9%84%D8%AA%D9%81%D8%B9%D9%84%D9%87%D8%A7"
+                                    target="_blank" data-lightbox="portfolio"><i class="fas fa-search"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- gaming app -->
+                <div class="portfolio-item" data-category="app">
+                    <div class="portfolio-img">
+                        <a href="MEDIA/gapp.png" data-lg-size="1600-1066" class="gallery-item">
+                            <img src="MEDIA/gapp.png" alt="تطبيق متجر">
+                        </a>
+                        <div class="portfolio-overlay">
+                            <h3>تطبيق تجارة إلكترونية</h3>
+                            <p>تطبيق متجر ألعاب مع سلة شراء ودفع</p>
+                            <div class="portfolio-links">
+                                <a href="https://appetize.io/app/b_okz4m2m37zyqrlszjvqbocgk3u" target="_blank"><i
+                                        class="fas fa-link"></i></a>
+                                <a href="https://mostaql.com/portfolio/3144711-%D8%AA%D8%B7%D8%A8%D9%8A%D9%82-%D9%85%D8%AA%D8%AC%D8%B1-%D8%A7%D9%84%D8%B9%D8%A7%D8%A8"
+                                    target="_blank" data-lightbox="portfolio"><i class="fas fa-search"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Software Project 1 -->
+                <div class="portfolio-item" data-category="software">
+                    <div class="portfolio-img">
+                        <div class="video-container">
+                            <a href="MEDIA/hotelp.png" data-lg-size="1600-1066" class="gallery-item">
+                                <img src="MEDIA/hotelp.png" alt="نظام حجز فنادق">
+                            </a>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <h3>نظام حجز الفنادق</h3>
+                            <p>تطبيق Java Swing لإدارة الفنادق مع تكامل قاعدة البيانات</p>
+                            <div class="portfolio-links">
+                                <a href="https://github.com/Ahmedsaeed1104/HOTEL-RESERVATION-SYSTEM" target="_blank"><i
+                                        class="fas fa-link"></i></a>
+                                <a href="MEDIA/Hotel.mp4" data-lightbox="portfolio"><i class="fas fa-search"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Embedded Project 1 -->
+                <div class="portfolio-item" data-category="embedded">
+                    <div class="portfolio-img">
+                        <a href="MEDIA/PROJECT_EMB/EMB_2.png" data-lg-size="1600-1066" class="gallery-item">
+                            <img src="MEDIA/PROJECT_EMB/EMB_2.png" alt="راسم إشارة PWM">
+                        </a>
+                        <div class="portfolio-overlay">
+                            <h3>راسم إشارة PWM</h3>
+                            <p>محلل موجات PWM مبني على ATmega32 مع شاشة LCD رسومية</p>
+                            <div class="portfolio-links">
+                                <a href="https://github.com/Ahmedsaeed1104/PWM-Drawer-Oscilloscope-" target="_blank"><i
+                                        class="fas fa-link"></i></a>
+                                <a href="MEDIA/PROJECT_EMB/EMB_2.png" data-lightbox="portfolio"><i
+                                        class="fas fa-search"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ML Project 1 -->
+                <div class="portfolio-item" data-category="ml">
+                    <div class="portfolio-img">
+
+                        <a href="MEDIA/mach.png" data-lg-size="1600-1066" class="gallery-item">
+                            <img src="MEDIA/machinee.png" alt="توقع أمراض القلب">
+                        </a>
+
+                        <div class="portfolio-overlay">
+                            <h3>توقع أمراض القلب</h3>
+                            <p>مسار تعلم آلي لتقييم خطر الإصابة بأمراض القلب</p>
+                            <div class="portfolio-links">
+                                <a href="https://www.kaggle.com/code/ahmedsaeed1104/ml-project" target="_blank"><i
+                                        class="fas fa-link"></i></a>
+                                <a href="MEDIA/Machine.mp4" data-lightbox="portfolio"><i class="fas fa-search"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">توصيات <span>العملاء</span></h2>
+            <div class="testimonials-slider">
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>تعامل راقي واحترافي بأمتياز وصبور جدا الله يعطيك العافيه</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>أ/حنان عيد</h4>
+                        <p>معلمة احياء</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>انصح بالتعامل معه</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>أ/ابتهال غازي</h4>
+                        <p>معلمة فيزياء</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section dir="ltr" id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">اتصل <span>بي</span></h2>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>معلومات الاتصال</h3>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>البريد الإلكتروني</h4>
+                            <a href="mailto:ahmedsaeedabab1010@gmail.com">ahmedsaeedabab1010@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>الهاتف</h4>
+                            <a href="tel:+201550905627">+20 155 090 5627</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>الموقع</h4>
+                            <p>الإسكندرية، مصر</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/ahmedsaeed1104" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Ahmedsaeed1104" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100008093018946" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>أرسل لي رسالة</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="اسمك" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="بريدك الإلكتروني" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" placeholder="الموضوع">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" placeholder="رسالتك" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">أرسل الرسالة</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer dir="ltr">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>أحمد سعيد</h3>
+                    <p>مهندس برمجيات مبدع متمكن في تطوير Flutter والويب، ملتزم ببناء تجارب ويب وجوال تفاعلية عالية
+                        الأداء.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#about">من أنا</a></li>
+                        <li><a href="#skills">المهارات</a></li>
+                        <li><a href="#portfolio">المشاريع</a></li>
+                        <li><a href="#contact">اتصل بي</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>الخدمات</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">تطوير Flutter</a></li>
+                        <li><a href="#services">تطوير الويب</a></li>
+                        <li><a href="#services">تطوير البرمجيات</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>معلومات الاتصال</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:ahmedsaeedabab1010@gmail.com">ahmedsaeedabab1010@gmail.com</a></li>
+                        <li><a href="tel:+201550905627">+20 155 090 5627</a></li>
+                        <li>الإسكندرية، مصر</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="AR/script.js"></script>
+</body>
+
+</html>
