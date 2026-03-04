@@ -1111,14 +1111,25 @@ header.scrolled {
 }
 
 .certificate-link {
-    color: var(--primary-color);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, var(--primary-color), #A52A2A);
+    color: white;
     text-decoration: none;
     font-weight: 500;
     transition: var(--transition);
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(139, 0, 0, 0.3);
+    margin-top: 10px;
 }
 
 .certificate-link:hover {
-    color: var(--secondary-color);
+    background: linear-gradient(135deg, #A52A2A, var(--primary-color));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(139, 0, 0, 0.4);
+    color: white;
 }
 
 /* ===== Services Section ===== */

@@ -108,7 +108,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const filterValue = this.getAttribute('data-filter');
 
             portfolioItems.forEach(item => {
-                if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                const itemCategories = item.getAttribute('data-category').split(' ');
+                if (filterValue === 'all' || itemCategories.includes(filterValue)) {
                     item.style.display = 'block';
                     setTimeout(() => {
                         item.style.opacity = '1';
