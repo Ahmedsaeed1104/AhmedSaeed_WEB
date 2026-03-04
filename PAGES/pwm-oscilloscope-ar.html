@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>راسم إشارة PWM | أحمد سعيد</title>
+    <link rel="icon" type="image/png" href="../MEDIA/A.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 50%, #2A2A2A 100%);
+            color: #FFFFFF;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #B22222, #8B0000);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(178, 34, 34, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #FFFFFF;
+        }
+
+        .project-info {
+            background: rgba(40, 40, 40, 0.8);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            border-right: 4px solid #B22222;
+        }
+
+        .project-info h2 {
+            color: #B22222;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .project-info p {
+            color: #CCCCCC;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tech-tag {
+            background: rgba(178, 34, 34, 0.2);
+            border: 1px solid #B22222;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #FFFFFF;
+        }
+
+        .media-section {
+            margin-top: 40px;
+        }
+
+        .media-section h2 {
+            color: #B22222;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .image-card {
+            background: rgba(40, 40, 40, 0.8);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(178, 34, 34, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(178, 34, 34, 0.4);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .image-card .caption {
+            padding: 20px;
+            color: #CCCCCC;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .github-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: rgba(60, 60, 60, 0.8);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            border: 2px solid #B22222;
+            font-size: 1rem;
+        }
+
+        .github-link:hover {
+            background: #B22222;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .project-info {
+                padding: 20px;
+            }
+
+            .project-info h2 {
+                font-size: 1.5rem;
+            }
+
+            .project-info p {
+                font-size: 1rem;
+            }
+
+            .images-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .back-btn,
+            .github-link {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+
+            .media-section h2 {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .project-info {
+                padding: 15px;
+            }
+
+            .project-info h2 {
+                font-size: 1.3rem;
+            }
+
+            .tech-tags {
+                gap: 8px;
+            }
+
+            .tech-tag {
+                font-size: 0.85rem;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="../index2.html#portfolio" class="back-btn">
+            <i class="fas fa-arrow-right"></i> العودة للمشاريع
+        </a>
+
+        <h1>راسم إشارة PWM</h1>
+
+        <div class="project-info">
+            <h2>عن هذا المشروع</h2>
+            <p>نظام مدمج مبني على ATmega32 يحلل موجات PWM باستخدام وحدة التقاط الإدخال في Timer 1. يعرض التردد ودورة
+                العمل وتصور الموجة على شاشة LCD رسومية في الوقت الفعلي.</p>
+
+            <div class="tech-tags">
+                <span class="tech-tag">ATmega32</span>
+                <span class="tech-tag">Embedded C</span>
+                <span class="tech-tag">Timer/Counter</span>
+                <span class="tech-tag">Graphical LCD</span>
+                <span class="tech-tag">PWM</span>
+            </div>
+
+            <a href="https://github.com/Ahmedsaeed1104/PWM-Drawer-Oscilloscope-" target="_blank" class="github-link">
+                <i class="fab fa-github"></i> عرض على GitHub
+            </a>
+        </div>
+
+        <div class="media-section">
+            <h2>صور المشروع</h2>
+            <div class="images-grid">
+                <div class="image-card">
+                    <img src="../MEDIA/PROJECT_EMB/EMB_1.png" alt="دائرة راسم PWM">
+                    <div class="caption">تصميم الدائرة</div>
+                </div>
+                <div class="image-card">
+                    <img src="../MEDIA/PROJECT_EMB/EMB_2.png" alt="شاشة راسم PWM">
+                    <div class="caption">عرض الموجة على LCD</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

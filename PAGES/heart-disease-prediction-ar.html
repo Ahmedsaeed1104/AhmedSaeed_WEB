@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>توقع أمراض القلب | أحمد سعيد</title>
+    <link rel="icon" type="image/png" href="../MEDIA/A.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 50%, #2A2A2A 100%);
+            color: #FFFFFF;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #B22222, #8B0000);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(178, 34, 34, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #FFFFFF;
+        }
+
+        .project-info {
+            background: rgba(40, 40, 40, 0.8);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            border-right: 4px solid #B22222;
+        }
+
+        .project-info h2 {
+            color: #B22222;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .project-info p {
+            color: #CCCCCC;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tech-tag {
+            background: rgba(178, 34, 34, 0.2);
+            border: 1px solid #B22222;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #FFFFFF;
+        }
+
+        .media-section {
+            margin-top: 40px;
+        }
+
+        .media-section h2 {
+            color: #B22222;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        /* TV Frame Style */
+        .tv-frame {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+            background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+            border-radius: 20px;
+            box-shadow:
+                0 0 0 8px #2a2a2a,
+                0 0 0 12px #1a1a1a,
+                0 20px 60px rgba(0, 0, 0, 0.8),
+                inset 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .tv-frame::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 2px solid rgba(178, 34, 34, 0.3);
+            border-radius: 15px;
+            pointer-events: none;
+        }
+
+        .tv-screen {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow:
+                inset 0 0 30px rgba(0, 0, 0, 0.8),
+                0 0 20px rgba(178, 34, 34, 0.2);
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .kaggle-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: rgba(60, 60, 60, 0.8);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            border: 2px solid #B22222;
+            font-size: 1rem;
+        }
+
+        .kaggle-link:hover {
+            background: #B22222;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .project-info {
+                padding: 20px;
+            }
+
+            .project-info h2 {
+                font-size: 1.5rem;
+            }
+
+            .project-info p {
+                font-size: 1rem;
+            }
+
+            .tv-frame {
+                padding: 20px;
+            }
+
+            .back-btn,
+            .kaggle-link {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+
+            .media-section h2 {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .project-info {
+                padding: 15px;
+            }
+
+            .project-info h2 {
+                font-size: 1.3rem;
+            }
+
+            .tv-frame {
+                padding: 15px;
+            }
+
+            .tech-tags {
+                gap: 8px;
+            }
+
+            .tech-tag {
+                font-size: 0.85rem;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="../index2.html#portfolio" class="back-btn">
+            <i class="fas fa-arrow-right"></i> العودة للمشاريع
+        </a>
+
+        <h1>توقع أمراض القلب</h1>
+
+        <div class="project-info">
+            <h2>عن هذا المشروع</h2>
+            <p>مشروع تعلم آلي يحلل ويتوقع مخاطر أمراض القلب باستخدام نماذج تصنيف متعددة (الانحدار اللوجستي، أشجار
+                القرار، الغابة العشوائية، SVM) مع تقليل الأبعاد PCA وضبط المعلمات الفائقة.</p>
+
+            <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Scikit-learn</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">PCA</span>
+                <span class="tech-tag">Random Forest</span>
+                <span class="tech-tag">SVM</span>
+                <span class="tech-tag">Streamlit</span>
+            </div>
+
+            <a href="https://www.kaggle.com/code/ahmedsaeed1104/ml-project" target="_blank" class="kaggle-link">
+                <i class="fab fa-kaggle"></i> عرض على Kaggle
+            </a>
+        </div>
+
+        <div class="media-section">
+            <h2>عرض المشروع</h2>
+            <div class="tv-frame">
+                <div class="tv-screen">
+                    <video controls>
+                        <source src="../MEDIA/Machine.mp4" type="video/mp4">
+                        متصفحك لا يدعم عرض الفيديو.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

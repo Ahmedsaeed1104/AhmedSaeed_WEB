@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق التجارة الإلكترونية | أحمد سعيد</title>
+    <link rel="icon" type="image/png" href="../MEDIA/A.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 50%, #2A2A2A 100%);
+            color: #FFFFFF;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #B22222, #8B0000);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(178, 34, 34, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #FFFFFF;
+        }
+
+        .project-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #B22222, #8B0000);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .project-info {
+            background: rgba(40, 40, 40, 0.8);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            border-right: 4px solid #B22222;
+        }
+
+        .project-info h2 {
+            color: #B22222;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .project-info p {
+            color: #CCCCCC;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .project-info ul {
+            color: #CCCCCC;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-right: 20px;
+            margin-bottom: 15px;
+        }
+
+        .project-info ul li {
+            margin-bottom: 10px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tech-tag {
+            background: rgba(178, 34, 34, 0.2);
+            border: 1px solid #B22222;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #FFFFFF;
+        }
+
+        .team-section {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(50, 50, 50, 0.5);
+            border-radius: 8px;
+        }
+
+        .team-section h3 {
+            color: #B22222;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .team-member {
+            background: rgba(60, 60, 60, 0.8);
+            padding: 10px 20px;
+            border-radius: 20px;
+            color: #FFFFFF;
+            font-size: 1rem;
+        }
+
+        .links-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: rgba(60, 60, 60, 0.8);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 2px solid #B22222;
+            font-size: 1rem;
+        }
+
+        .project-link:hover {
+            background: #B22222;
+            transform: translateY(-2px);
+        }
+
+        .media-section {
+            margin-top: 40px;
+        }
+
+        .media-section h2 {
+            color: #B22222;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .images-grid-single {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .image-card {
+            background: rgba(40, 40, 40, 0.8);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(178, 34, 34, 0.3);
+            transition: all 0.3s ease;
+            max-width: 100%;
+        }
+
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(178, 34, 34, 0.5);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .project-info {
+                padding: 20px;
+            }
+
+            .project-info h2 {
+                font-size: 1.5rem;
+            }
+
+            .project-info p,
+            .project-info ul {
+                font-size: 1rem;
+            }
+
+            .images-grid-single {
+                gap: 25px;
+            }
+
+            .back-btn,
+            .project-link {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+
+            .media-section h2 {
+                font-size: 1.6rem;
+            }
+
+
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .project-info {
+                padding: 15px;
+            }
+
+            .project-info h2 {
+                font-size: 1.3rem;
+            }
+
+            .tech-tags {
+                gap: 8px;
+            }
+
+            .tech-tag {
+                font-size: 0.85rem;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="../index2.html#portfolio" class="back-btn">
+            <i class="fas fa-arrow-right"></i> العودة للمشاريع
+        </a>
+
+        <span class="project-badge">🛒 مشروع DEPI</span>
+        <h1>تطبيق التجارة الإلكترونية</h1>
+
+        <div class="project-info">
+            <h2>تطبيق تسوق متعدد المنصات</h2>
+            <p>تطبيق تسوق حديث ومتاح عبر منصات متعددة مصمم لتوفير تجربة اكتشاف منتجات سلسة، وعملية دفع آمنة، وواجهة متجر
+                جوال بديهية.</p>
+
+            <h2 style="margin-top: 30px;">الميزات الرئيسية</h2>
+            <ul>
+                <li>تطبيق تسوق متعدد المنصات باستخدام Flutter مع واجهة مستخدم نظيفة وسريعة الاستجابة</li>
+                <li>إدارة الحالة BLoC لبنية قابلة للتوسع وسهلة الصيانة</li>
+                <li>تكامل RESTful APIs باستخدام Postman لبيانات المنتجات والفئات والسلة والمفضلة</li>
+                <li>ميزات أساسية تشمل تصفح المنتجات والسلة والدفع</li>
+                <li>تحسين الأداء وإمكانية الوصول لتجربة مستخدم سلسة</li>
+            </ul>
+
+            <div class="tech-tags">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">Dart</span>
+                <span class="tech-tag">BLoC</span>
+                <span class="tech-tag">RESTful API</span>
+                <span class="tech-tag">Postman</span>
+                <span class="tech-tag">State Management</span>
+            </div>
+
+            <div class="team-section">
+                <h3>فريق المشروع</h3>
+                <div class="team-members">
+                    <span class="team-member">أحمد سعيد</span>
+                    <span class="team-member">مروان رضا</span>
+                    <span class="team-member">كرس مدحت</span>
+                    <span class="team-member">أحمد أشرف</span>
+                </div>
+            </div>
+
+            <div class="links-section">
+                <a href="https://github.com/nhahub/NHA-223" target="_blank" class="project-link">
+                    <i class="fab fa-github"></i> عرض على GitHub
+                </a>
+                <a href="https://appetize.io/app/b_aud3wyua7aogi3iuxfqdk3lqiq" target="_blank" class="project-link">
+                    <i class="fas fa-mobile-alt"></i> جرب التطبيق
+                </a>
+            </div>
+        </div>
+
+        <div class="media-section">
+            <h2>معرض المشروع</h2>
+            <div class="images-grid-single">
+                <div class="image-card">
+                    <img src="../MEDIA/DEPI/app/2.png" alt="شاشة التطبيق 1">
+                </div>
+                <div class="image-card">
+                    <img src="../MEDIA/DEPI/app/3.png" alt="شاشة التطبيق 2">
+                </div>
+                <div class="image-card">
+                    <img src="../MEDIA/DEPI/app/4.png" alt="شاشة التطبيق 3">
+                </div>
+                <div class="image-card">
+                    <img src="../MEDIA/DEPI/app/5.png" alt="شاشة التطبيق 4">
+                </div>
+                <div class="image-card">
+                    <img src="../MEDIA/DEPI/app/6.png" alt="شاشة التطبيق 5">
+                </div>
+                <div class="image-card">
+                    <img src="../MEDIA/DEPI/app/7.png" alt="شاشة التطبيق 6">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

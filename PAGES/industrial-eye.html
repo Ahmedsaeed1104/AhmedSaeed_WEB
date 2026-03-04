@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial Eye - Graduation Project | Ahmed Saeed</title>
+    <link rel="icon" type="image/png" href="../MEDIA/A.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 50%, #2A2A2A 100%);
+            color: #FFFFFF;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #B22222, #8B0000);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(178, 34, 34, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #FFFFFF;
+        }
+
+        .project-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #B22222, #8B0000);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .project-info {
+            background: rgba(40, 40, 40, 0.8);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            border-left: 4px solid #B22222;
+        }
+
+        .project-info h2 {
+            color: #B22222;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .project-info p {
+            color: #CCCCCC;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .project-info ul {
+            color: #CCCCCC;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .project-info ul li {
+            margin-bottom: 10px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tech-tag {
+            background: rgba(178, 34, 34, 0.2);
+            border: 1px solid #B22222;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #FFFFFF;
+        }
+
+        .links-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: rgba(60, 60, 60, 0.8);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 2px solid #B22222;
+            font-size: 1rem;
+        }
+
+        .project-link:hover {
+            background: #B22222;
+            transform: translateY(-2px);
+        }
+
+        .media-section {
+            margin-top: 40px;
+        }
+
+        .media-section h2 {
+            color: #B22222;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .section-subtitle {
+            color: #FFFFFF;
+            font-size: 1.5rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(178, 34, 34, 0.3);
+        }
+
+        .images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .images-grid-single {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .images-grid-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .images-grid-row .image-card img {
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .image-card .caption {
+            padding: 15px;
+            color: #CCCCCC;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
+        .image-card {
+            background: rgba(40, 40, 40, 0.8);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(178, 34, 34, 0.3);
+            transition: all 0.3s ease;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(178, 34, 34, 0.4);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* Phone Frame for App Screenshots */
+        .phone-frame {
+            position: relative;
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto;
+            padding: 15px 10px;
+            background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+            border-radius: 35px;
+            box-shadow:
+                0 0 0 3px #3a3a3a,
+                0 0 0 6px #2a2a2a,
+                0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .phone-frame::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 6px;
+            background: #1a1a1a;
+            border-radius: 3px;
+        }
+
+        .phone-screen {
+            position: relative;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .phone-screen img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .app-image-card {
+            background: transparent;
+            border-radius: 0;
+            overflow: visible;
+            box-shadow: none;
+        }
+
+        .app-image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: none;
+        }
+
+        .app-image-card .caption {
+            display: none;
+        }
+
+        .image-card .caption {
+            padding: 15px;
+            color: #CCCCCC;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .project-info {
+                padding: 20px;
+            }
+
+            .project-info h2 {
+                font-size: 1.5rem;
+            }
+
+            .project-info p,
+            .project-info ul {
+                font-size: 1rem;
+            }
+
+            .images-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .images-grid-single {
+                gap: 25px;
+            }
+
+            .images-grid-row {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .images-grid-row .image-card img {
+                height: auto;
+            }
+
+            .back-btn,
+            .project-link {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+
+            .media-section h2 {
+                font-size: 1.6rem;
+            }
+
+            .section-subtitle {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .project-info {
+                padding: 15px;
+            }
+
+            .project-info h2 {
+                font-size: 1.3rem;
+            }
+
+            .tech-tags {
+                gap: 8px;
+            }
+
+            .tech-tag {
+                font-size: 0.85rem;
+                padding: 6px 12px;
+            }
+
+            .phone-frame {
+                max-width: 280px;
+                padding: 12px 8px;
+                border-radius: 30px;
+            }
+
+            .phone-frame::before {
+                width: 50px;
+                height: 5px;
+            }
+
+            .phone-screen {
+                border-radius: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="../index.html#portfolio" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+
+        <span class="project-badge">🎓 Graduation Project</span>
+        <h1>Industrial Eye</h1>
+
+        <div class="project-info">
+            <h2>End-to-End Predictive Maintenance System</h2>
+            <p><strong>Egypt-Japan University of Science and Technology (E-JUST)</strong></p>
+            <p>An advanced predictive maintenance system combining Edge AI, IoT, and Cloud technologies for real-time
+                anomaly detection and continuous learning.</p>
+
+            <p style="margin-top: 20px;"><strong>For Testing (Login Credentials):</strong><br>
+                Email: user1@gmail.com<br>
+                Password: 12345678</p>
+
+            <h2 style="margin-top: 30px;">Key Features</h2>
+            <ul>
+                <li>End-to-end predictive maintenance using Arduino with multi-sensor data collection</li>
+                <li>Three Autoencoder models (TensorFlow → TFLite) for real-time anomaly detection</li>
+                <li>On-device ML inference in cross-platform Flutter app with alerts and monitoring</li>
+                <li>Cloud-based continuous learning pipeline for automatic model updates</li>
+                <li>Embedded firmware with WiFi communication and real-time data streaming</li>
+            </ul>
+
+            <div class="tech-tags">
+                <span class="tech-tag">Arduino</span>
+                <span class="tech-tag">C/C++</span>
+                <span class="tech-tag">TensorFlow</span>
+                <span class="tech-tag">TFLite</span>
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">Firebase</span>
+                <span class="tech-tag">Supabase</span>
+                <span class="tech-tag">Edge AI</span>
+                <span class="tech-tag">Cloud Integration</span>
+            </div>
+
+            <div class="links-section">
+                <a href="https://github.com/Ahmedsaeed1104/industrial_eye_ML-HW" target="_blank" class="project-link">
+                    <i class="fab fa-github"></i> ML & Hardware
+                </a>
+                <a href="https://github.com/Ahmedsaeed1104/industrial_eye" target="_blank" class="project-link">
+                    <i class="fab fa-github"></i> Flutter App
+                </a>
+                <a href="https://www.kaggle.com/code/ahmedsaeed1104/industrial-eye-models/edit" target="_blank"
+                    class="project-link">
+                    <i class="fab fa-kaggle"></i> Models
+                </a>
+                <a href="https://appetize.io/app/b_2pagflyofa5uurogopfjedscga" target="_blank" class="project-link">
+                    <i class="fas fa-mobile-alt"></i> Try App
+                </a>
+            </div>
+        </div>
+
+        <div class="media-section">
+            <h2>Project Gallery</h2>
+
+            <h3 class="section-subtitle">Flutter Application</h3>
+            <div class="images-grid">
+                <div class="app-image-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="../MEDIA/GRAD/app/1.png" alt="App Screen 1">
+                        </div>
+                    </div>
+                </div>
+                <div class="app-image-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="../MEDIA/GRAD/app/2.png" alt="App Screen 2">
+                        </div>
+                    </div>
+                </div>
+                <div class="app-image-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="../MEDIA/GRAD/app/3.png" alt="App Screen 3">
+                        </div>
+                    </div>
+                </div>
+                <div class="app-image-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="../MEDIA/GRAD/app/4.png" alt="App Screen 4">
+                        </div>
+                    </div>
+                </div>
+                <div class="app-image-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="../MEDIA/GRAD/app/5.png" alt="App Screen 5">
+                        </div>
+                    </div>
+                </div>
+                <div class="app-image-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="../MEDIA/GRAD/app/6.png" alt="App Screen 6">
+                        </div>
+                    </div>
+                </div>
+                <div class="app-image-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="../MEDIA/GRAD/app/7.png" alt="App Screen 7">
+                        </div>
+                    </div>
+                </div>
+                <div class="app-image-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="../MEDIA/GRAD/app/8.png" alt="App Screen 8">
+                        </div>
+                    </div>
+                </div>
+                <div class="app-image-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="../MEDIA/GRAD/app/9.png" alt="App Screen 9">
+                        </div>
+                    </div>
+                </div>
+                <div class="app-image-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="../MEDIA/GRAD/app/10.png" alt="App Screen 10">
+                        </div>
+                    </div>
+                </div>
+                <div class="app-image-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="../MEDIA/GRAD/app/11.png" alt="App Screen 11">
+                        </div>
+                    </div>
+                </div>
+                <div class="app-image-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="../MEDIA/GRAD/app/12.png" alt="App Screen 12">
+                        </div>
+                    </div>
+                </div>
+                <div class="app-image-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="../MEDIA/GRAD/app/13.png" alt="App Screen 13">
+                        </div>
+                    </div>
+                </div>
+                <div class="app-image-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="../MEDIA/GRAD/app/14.png" alt="App Screen 14">
+                        </div>
+                    </div>
+                </div>
+                <div class="app-image-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="../MEDIA/GRAD/app/15.png" alt="App Screen 15">
+                        </div>
+                    </div>
+                </div>
+                <div class="app-image-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="../MEDIA/GRAD/app/16.png" alt="App Screen 16">
+                        </div>
+                    </div>
+                </div>
+                <div class="app-image-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="../MEDIA/GRAD/app/17.png" alt="App Screen 17">
+                        </div>
+                    </div>
+                </div>
+                <div class="app-image-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="../MEDIA/GRAD/app/18.png" alt="App Screen 18">
+                        </div>
+                    </div>
+                </div>
+                <div class="app-image-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="../MEDIA/GRAD/app/19.png" alt="App Screen 19">
+                        </div>
+                    </div>
+                </div>
+                <div class="app-image-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="../MEDIA/GRAD/app/20.png" alt="App Screen 20">
+                        </div>
+                    </div>
+                </div>
+                <div class="app-image-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="../MEDIA/GRAD/app/21.png" alt="App Screen 21">
+                        </div>
+                    </div>
+                </div>
+                <div class="app-image-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="../MEDIA/GRAD/app/22.png" alt="App Screen 22">
+                        </div>
+                    </div>
+                </div>
+                <div class="app-image-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="../MEDIA/GRAD/app/23.png" alt="App Screen 23">
+                        </div>
+                    </div>
+                </div>
+                <div class="app-image-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="../MEDIA/GRAD/app/24.png" alt="App Screen 24">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="section-subtitle">Hardware & Embedded System</h3>
+            <div class="images-grid-row">
+                <div class="image-card">
+                    <img src="../MEDIA/GRAD/hardware/Housing.jpeg" alt="Hardware Housing">
+                    <div class="caption">System Housing</div>
+                </div>
+                <div class="image-card">
+                    <img src="../MEDIA/GRAD/hardware/RP2040.webp" alt="RP2040 Board">
+                    <div class="caption">RP2040 Microcontroller</div>
+                </div>
+            </div>
+
+            <h3 class="section-subtitle">Firebase Integration</h3>
+            <div class="images-grid-single">
+                <div class="image-card">
+                    <img src="../MEDIA/GRAD/firebase/firebase 1.png" alt="Firebase 1">
+                </div>
+                <div class="image-card">
+                    <img src="../MEDIA/GRAD/firebase/firebase 2.png" alt="Firebase 2">
+                </div>
+                <div class="image-card">
+                    <img src="../MEDIA/GRAD/firebase/firebase 3.png" alt="Firebase 3">
+                </div>
+                <div class="image-card">
+                    <img src="../MEDIA/GRAD/firebase/firebase 4.png" alt="Firebase 4">
+                </div>
+            </div>
+
+            <h3 class="section-subtitle">Supabase Backend</h3>
+            <div class="images-grid-single">
+                <div class="image-card">
+                    <img src="../MEDIA/GRAD/supabase/subabase 1.png" alt="Supabase 1">
+                </div>
+                <div class="image-card">
+                    <img src="../MEDIA/GRAD/supabase/subabase 2.png" alt="Supabase 2">
+                </div>
+            </div>
+
+            <h3 class="section-subtitle">Hugging Face Model Deployment</h3>
+            <div class="images-grid-single">
+                <div class="image-card">
+                    <img src="../MEDIA/GRAD/hugging face/hugging 2.png" alt="Hugging Face 2">
+                </div>
+                <div class="image-card">
+                    <img src="../MEDIA/GRAD/hugging face/hugging 1.png" alt="Hugging Face 1">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
