@@ -6,48 +6,11 @@
 // ===== DOM Content Loaded Event =====
 document.addEventListener('DOMContentLoaded', function () {
 
-    // ===== Typewriter Effect for Name Only =====
-    function initTypewriter() {
-        const nameElement = document.getElementById('typed-name');
-        const nameText = "Ahmed Saeed";
-        let nameIndex = 1;
-        let isDeleting = false;
-        let typingSpeed = 100;
-
-        // خلي أول حرف يظهر مباشرة
-        nameElement.textContent = nameText.substring(0, nameIndex);
-
-        function typeName() {
-            if (!isDeleting && nameIndex <= nameText.length) {
-                // كتابة
-                nameElement.textContent = nameText.substring(0, nameIndex);
-                nameIndex++;
-                setTimeout(typeName, typingSpeed);
-            } else if (isDeleting && nameIndex >= 1) {
-                // مسح
-                nameElement.textContent = nameText.substring(0, nameIndex);
-                nameIndex--;
-                setTimeout(typeName, typingSpeed / 2);
-            } else {
-                // تبديل بين الكتابة والمسح
-                isDeleting = !isDeleting;
-
-                // لو بدأ يكتب تاني، يبدأ من أول حرف
-                if (!isDeleting) {
-                    nameIndex = 1;
-                }
-
-                setTimeout(typeName, isDeleting ? 2000 : 500);
-            }
-        }
-
-        // يبدأ التأثير بعد ثواني بسيطة
-        setTimeout(typeName, 1000);
+    // ===== Static Name Display =====
+    const nameElement = document.getElementById('typed-name');
+    if (nameElement) {
+        nameElement.textContent = "Ahmed Saeed";
     }
-
-
-    // Initialize typewriter
-    initTypewriter();
 
     // ===== LightGallery Initialization =====
     lightGallery(document.querySelector('.portfolio-grid'), {
