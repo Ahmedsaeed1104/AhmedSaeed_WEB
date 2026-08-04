@@ -1668,7 +1668,7 @@ header.scrolled {
 .info-item div h4 {
     font-size: 1.1rem;
     margin-bottom: 5px;
-    color: var(--dark-color);
+    color: #FFFFFF;
 }
 
 .info-item div a,
